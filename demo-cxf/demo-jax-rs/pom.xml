@@ -15,6 +15,7 @@
     <modules>
         <module>demo-01-jax-rs-01-server</module>
         <module>demo-01-jax-rs-01-client</module>
+        <module>demo-03-springboot-jax-rs-01-server</module>
     </modules>
 
     <properties>

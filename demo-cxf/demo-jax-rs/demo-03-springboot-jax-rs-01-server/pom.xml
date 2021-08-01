@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>demo-jax-ws</artifactId>
+        <artifactId>demo-jax-rs</artifactId>
         <groupId>com.suyh</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-03-springboot-jax-ws-01-server</artifactId>
+    <artifactId>demo-03-springboot-jax-rs-01-server</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -34,12 +34,25 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--cxf的jax-ws-->
+        <!--cxf的jax-rs-->
         <dependency>
             <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+            <artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
             <version>3.1.12</version>
         </dependency>
+
+        <!--cxf 默认无法将XML 转换成json，如果要使用json 格式则需要添加如下坐标-->
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-rs-extension-providers</artifactId>
+            <version>3.1.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jettison</groupId>
+            <artifactId>jettison</artifactId>
+            <version>1.3.7</version>
+        </dependency>
+
     </dependencies>
 
 </project>
