@@ -22,5 +22,17 @@
             <artifactId>cxf-rt-rs-client</artifactId>
             <version>3.2.4</version>
         </dependency>
+
+        <!--cxf 默认无法将XML 转换成json，如果要使用json 格式则需要添加如下坐标-->
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-rs-extension-providers</artifactId>
+            <version>3.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jettison</groupId>
+            <artifactId>jettison</artifactId>
+            <version>1.3.7</version>
+        </dependency>
     </dependencies>
 </project>

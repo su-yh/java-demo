@@ -1,9 +1,12 @@
 package cn.sm1234.main;
 
+import cn.sm1234.service.impl.UserServiceImpl;
+import cn.sm1234.service.impl.UserServiceImplJson;
 import org.apache.cxf.interceptor.LoggingInInterceptor;
 import org.apache.cxf.interceptor.LoggingOutInterceptor;
 import org.apache.cxf.jaxrs.JAXRSServerFactoryBean;
-import cn.sm1234.service.impl.UserServiceImpl;
+
+import java.util.Arrays;
 
 public class DemoApplicationJaxRsServer01 {
     public static void main(String[] args) {
@@ -14,7 +17,7 @@ public class DemoApplicationJaxRsServer01 {
         // 2.1 设置访问地址(让客户端访问)
         factory.setAddress("http://localhost:8159/userService");
         // 2.2 设置实现类对象(必须是有注解@WebService标注的类)
-        factory.setServiceBean(new UserServiceImpl());
+        factory.setServiceBeans(Arrays.asList(new UserServiceImpl(), new UserServiceImplJson()));
 
         // 设置日志拦截器
         // 输入拦截器
