@@ -2,6 +2,10 @@ package cn.sm1234.main;
 
 import cn.sm1234.domain.User;
 import cn.sm1234.service.UserService;
+import org.apache.cxf.endpoint.Client;
+import org.apache.cxf.frontend.ClientProxy;
+import org.apache.cxf.interceptor.LoggingInInterceptor;
+import org.apache.cxf.interceptor.LoggingOutInterceptor;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 
 public class DemoApplicationJaxWsClient01 {
@@ -16,6 +20,13 @@ public class DemoApplicationJaxWsClient01 {
         factory.setServiceClass(UserService.class);
         // 3. 创建接口的代理类对象
         UserService userService = (UserService) factory.create();
+
+        // 设置日志拦截器
+        Client client = ClientProxy.getClient(userService);
+        // 输入拦截器
+        client.getInInterceptors().add(new LoggingInInterceptor());
+        // 输出拦截器
+        client.getOutInterceptors().add(new LoggingOutInterceptor());
 
         // 4. 调用
         userService.saveUser(new User(1, "小张", "男"));

@@ -2,6 +2,8 @@ package cn.sm1234.main;
 
 import cn.sm1234.service.UserService;
 import cn.sm1234.service.impl.UserServiceImpl;
+import org.apache.cxf.interceptor.LoggingInInterceptor;
+import org.apache.cxf.interceptor.LoggingOutInterceptor;
 import org.apache.cxf.jaxws.JaxWsServerFactoryBean;
 
 public class DemoApplicationJaxWsServer01 {
@@ -16,6 +18,12 @@ public class DemoApplicationJaxWsServer01 {
         factory.setServiceClass(UserService.class);
         // 2.3 设置实现类对象(必须是有注解@WebService标注的类)
         factory.setServiceBean(new UserServiceImpl());
+
+        // 设置日志拦截器
+        // 输入拦截器
+        factory.getInInterceptors().add(new LoggingInInterceptor());
+        // 输出拦截器
+        factory.getOutInterceptors().add(new LoggingOutInterceptor());
 
         // 3. 发布接口
         factory.create();
