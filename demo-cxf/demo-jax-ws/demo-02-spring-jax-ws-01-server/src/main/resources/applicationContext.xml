@@ -8,9 +8,9 @@
         http://cxf.apache.org/schemas/jaxws.xsd">
 
     <!-- 发布接口 -->
-    <jaxws:server address="/userService" serviceClass="cn.sm1234.service.UserService">
+    <jaxws:server address="/userService" serviceClass="cn.UserService">
         <jaxws:serviceBean>
-            <bean class="cn.sm1234.service.impl.UserServiceImpl"/>
+            <bean class="cn.UserServiceImpl"/>
         </jaxws:serviceBean>
         <!-- 日志拦截器 -->
         <jaxws:inInterceptors>

@@ -10,6 +10,6 @@
     <!-- 创建服务接口代理类对象(客户端) -->
     <jaxws:client id="userService"
                   address="http://localhost:8080/demo-02-spring-jax-ws-01-client/userService"
-                  serviceClass="cn.sm1234.service.UserService"/>
+                  serviceClass="cn.UserService"/>
 
 </beans>
