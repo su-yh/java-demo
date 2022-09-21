@@ -15,7 +15,7 @@
     <!-- 博客: javadoop.com/post/spring-ioc -->
     <!-- 知乎: zhuanlan.zhihu.com/p/126671772 -->
     <properties>
-        <spring.version>4.3.11.RELEASE</spring.version>
+        <spring.version>5.2.9.RELEASE</spring.version>
     </properties>
 
     <dependencies>
