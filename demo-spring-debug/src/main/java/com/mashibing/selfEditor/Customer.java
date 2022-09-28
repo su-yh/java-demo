@@ -1,11 +1,11 @@
 package com.mashibing.selfEditor;
 
-import org.springframework.context.annotation.PropertySource;
-
 
 public class Customer {
 
     private String name;
+
+    // 自定义属性编辑器将识别并将配置文件中的配置属性解析然后注入该属性值。
     private Address address;
 
     public String getName() {
