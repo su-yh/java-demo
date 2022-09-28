@@ -9,7 +9,6 @@ public class CustomerEditorMain {
     public static void main(String[] args) {
         test01();
         test02();
-
     }
 
     private static void test01() {

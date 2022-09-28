@@ -6,6 +6,8 @@
     <bean id="customer" class="com.mashibing.selfEditor.CustomerBean">
         <property name="name" value="方式一"></property>
         <property name="address" value="河北省_邯郸市_武安市"></property>
+        <!--spring 默认提供的方式，参考：ResourceEditorRegistrar.registerCustomEditors-->
+        <property name="uri" value="http://localhost.huawei.com"></property>
     </bean>
 
     <!--方式一：对数组属性进行赋值-->
