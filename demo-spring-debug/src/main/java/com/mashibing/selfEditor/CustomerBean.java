@@ -1,12 +1,12 @@
 package com.mashibing.selfEditor;
 
 
-public class Customer {
+public class CustomerBean {
 
     private String name;
 
     // 自定义属性编辑器将识别并将配置文件中的配置属性解析然后注入该属性值。
-    private Address address;
+    private AddressVo address;
 
     public String getName() {
         return name;
@@ -16,11 +16,11 @@ public class Customer {
         this.name = name;
     }
 
-    public Address getAddress() {
+    public AddressVo getAddress() {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(AddressVo address) {
         this.address = address;
     }
 

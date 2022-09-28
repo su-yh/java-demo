@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="customer01" class="com.mashibing.selfEditor.Customer">
+    <bean id="customer01" class="com.mashibing.selfEditor.CustomerBean">
         <property name="name" value="zhangsan"></property>
         <property name="address" value="河北省_邯郸市_武安市"></property>
     </bean>
@@ -15,14 +15,14 @@
         </property>
     </bean>
 
-    <bean id="customer02" class="com.mashibing.selfEditor.Customer">
+    <bean id="customer02" class="com.mashibing.selfEditor.CustomerBean">
         <property name="name" value="lisi"></property>
         <property name="address" value="广东省_深圳市_龙岗区"></property>
     </bean>
     <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
         <property name="customEditors">
             <map>
-                <entry key="com.mashibing.selfEditor.Address">
+                <entry key="com.mashibing.selfEditor.AddressVo">
                     <value>com.mashibing.selfEditor.AddressPropertyEditor</value>
                 </entry>
             </map>
