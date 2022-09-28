@@ -24,7 +24,7 @@ public class Test {
 ////        User user = (User) ac.getBean("msb");
 ////        System.out.println(user.getUsername());
 //
-////        MyClassPathXmlApplicationContext ac = new MyClassPathXmlApplicationContext("selfEditor.xml");
+////        MyClassPathXmlApplicationContext ac = new MyClassPathXmlApplicationContext("selfEditor1_01.xml");
 ////        Customer bean = ac.getBean(Customer.class);
 ////        System.out.println(bean);
 ////        ConversionService bean = ac.getBean(ConversionService.class);

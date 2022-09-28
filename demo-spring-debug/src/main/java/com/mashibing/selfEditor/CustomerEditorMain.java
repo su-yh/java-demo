@@ -7,12 +7,20 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class CustomerEditorMain {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext("selfEditor.xml");
-        CustomerBean customer01 = ac.getBean("customer01", CustomerBean.class);
-        System.out.println("customer01: " + customer01);
+        test01();
+        test02();
 
-        CustomerBean customer02 = ac.getBean("customer02", CustomerBean.class);
-        System.out.println("customer02: " + customer02);
+    }
 
+    private static void test01() {
+        ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext("selfEditor1_01.xml");
+        CustomerBean customer = ac.getBean(CustomerBean.class);
+        System.out.println("customer: " + customer);
+    }
+
+    private static void test02() {
+        ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext("selfEditor1_02.xml");
+        CustomerBean customer = ac.getBean(CustomerBean.class);
+        System.out.println("customer: " + customer);
     }
 }

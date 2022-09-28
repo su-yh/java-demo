@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="customer" class="com.mashibing.selfEditor.CustomerBean">
+        <property name="name" value="方式一"></property>
+        <property name="address" value="河北省_邯郸市_武安市"></property>
+    </bean>
+
+    <!--方式一：对数组属性进行赋值-->
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="propertyEditorRegistrars">
+            <list>
+                <bean class="com.mashibing.selfEditor.AddressPropertyEditorRegistrar"></bean>
+            </list>
+        </property>
+    </bean>
+</beans>
