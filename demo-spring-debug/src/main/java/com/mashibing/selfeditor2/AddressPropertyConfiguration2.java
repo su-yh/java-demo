@@ -1,26 +1,21 @@
-package com.mashibing.selfeditor3;
+package com.mashibing.selfeditor2;
 
 import org.springframework.beans.PropertyEditorRegistrar;
 import org.springframework.beans.factory.config.CustomEditorConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-
-import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * @author dyan
  * @data 2020/12/12
  */
 @Configuration
-@PropertySource("classpath:customer.properties")
-public class AddressPropertyConfiguration {
+public class AddressPropertyConfiguration2 {
 
-    @Bean
-    public Customer customer() {
-        return new Customer();
-    }
+//    @Bean
+//    public Customer customer() {
+//        return new Customer();
+//    }
 
     @Bean
     public static CustomEditorConfigurer editorConfigurer() {
