@@ -1,7 +1,6 @@
-package com.mashibing;
+package com.mashibing.methodOverrides;
 
 import com.mashibing.methodOverrides.lookup.Apple;
-import com.mashibing.methodOverrides.lookup.FruitPlate;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

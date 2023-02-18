@@ -1,21 +1,12 @@
-package com.suyh.spring.service.impl;
+package com.suyh.component;
 
-
-import com.suyh.spring.service.HelloService;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-/**
- * @author 苏雲弘
- * @since 2021-01-07
- */
-public class HelloServiceImpl implements HelloService {
-
-    public String say() {
-        return "hello";
-    }
-
+@Component
+public class DemoComponent {
     @PostConstruct
     public void init() {
         System.out.println("init");
