@@ -6,15 +6,20 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
+        <!--spring 父容器的配置文件-->
         <param-value>classpath:spring-config.xml</param-value>
     </context-param>
 <!--    <display-name>SpringMVCDemo Web Application</display-name>-->
 
     <servlet>
         <servlet-name>mvc-test</servlet-name>
+        <!--DispatcherServlet 本质 上是一个spring mvc 容器或者说，spring mvc 容器本质 上是一个servlet-->
+        <!--它的源代码入口，从init() 方法开始。HttpServletBean.init()-->
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
+            <!--spring mvc 容器的配置文件-->
+            <!--也可以说它是DispatcherServlet 的一个配置文件-->
             <param-value>classpath:applicationContext.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
@@ -26,6 +31,7 @@
     </servlet-mapping>
     
     <listener>
+        <!--这里创建了一个基础的spring 容器环境，如果不配置这个则DispatcherServlet 则没有父容器-->
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
