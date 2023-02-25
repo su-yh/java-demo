@@ -33,6 +33,7 @@
 <!--        <module>demo-07-netty-03-rpc-client</module>-->
 <!--        <module>demo-08-netty-01-mulitport</module>-->
 <!--        <module>demo-cxf</module>-->
+        <module>spring-mvc-suyh</module>
     </modules>
 
    <dependencyManagement>
