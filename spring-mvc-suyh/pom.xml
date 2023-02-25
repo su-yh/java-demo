@@ -21,6 +21,13 @@
             <artifactId>spring-webmvc</artifactId>
             <version>5.3.23</version>
         </dependency>
+        <!--TODO: suyh - 添加这个依赖只是为了调试代码的时候不报红而以，对实际情况没有任何帮助和意义。如果有问题可以直接删除掉。-->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>8.0.52</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 
