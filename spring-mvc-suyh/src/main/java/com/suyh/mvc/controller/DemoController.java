@@ -3,6 +3,7 @@ package com.suyh.mvc.controller;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -18,7 +19,7 @@ public class DemoController {
 
     @RequestMapping(value = "/file/upload", produces = {MediaType.APPLICATION_JSON_VALUE})
     @ResponseBody
-    public String fileUpload(@RequestPart(value = "file") MultipartFile upload) {
+    public String fileUpload(@RequestPart(value = "file") MultipartFile upload, @RequestParam("desc") String desc) {
         if (upload == null) {
             return "failed";
         }
