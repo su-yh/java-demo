@@ -21,6 +21,14 @@
             <artifactId>spring-webmvc</artifactId>
             <version>5.3.23</version>
         </dependency>
+        <!--文件上传功能所需要引用的依赖包-->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.5</version>
+        </dependency>
+
+
         <!--TODO: suyh - 添加这个依赖只是为了调试代码的时候不报红而以，对实际情况没有任何帮助和意义。如果有问题可以直接删除掉。-->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>

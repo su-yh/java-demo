@@ -3,7 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="demoController" class="com.suyh.mvc.controller.DemoController">
-
+    <bean id="demoController" class="com.suyh.mvc.controller.DemoController"/>
+    <!--对于文件上传功能，需要指定一个解析器，并将其注册成一个bean 对象。-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="17367648787"/>
+        <property name="defaultEncoding" value="UTF-8"/>
     </bean>
 </beans>
