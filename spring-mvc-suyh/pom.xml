@@ -28,6 +28,13 @@
             <version>1.5</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
+
 
         <!--TODO: suyh - 添加这个依赖只是为了调试代码的时候不报红而以，对实际情况没有任何帮助和意义。如果有问题可以直接删除掉。-->
         <dependency>

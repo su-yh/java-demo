@@ -1,8 +1,14 @@
 package com.suyh.mvc.controller;
 
+import com.suyh.mvc.controller.vo.Student;
+import com.suyh.mvc.controller.vo.User;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -24,5 +30,34 @@ public class DemoController {
             return "failed";
         }
         return upload.getOriginalFilename();
+    }
+
+    @InitBinder("user")
+    public void bindUser(WebDataBinder binder) {
+        binder.setFieldDefaultPrefix("u.");
+    }
+
+    @InitBinder("stu1")
+    public void init1(WebDataBinder binder) {
+        // 这里的`s1.` 前缀是在URL 参数上面的前缀参数，或者表单参数
+        binder.setFieldDefaultPrefix("s1.");
+    }
+
+    @InitBinder("stu2")
+    public void init2(WebDataBinder binder) {
+        binder.setFieldDefaultPrefix("s2.");
+    }
+
+    /**
+     * http://localhost:8080/spring_mvc_suyh_war_exploded/suyh/testBean
+     * ?s1.number=1111&s1.gender=nan&s2.number=222&s2.gender=nv&s1.user.name=suyh&s1.user.age=33&u.name=name&u.age=11
+     */
+    @RequestMapping(value = "/testBean", method = RequestMethod.GET)
+    @ResponseBody
+    public String testBean(User user, @ModelAttribute("stu1") Student student, @ModelAttribute("stu2") Student student2) {
+        System.out.println(user);
+        System.out.println(student);
+        System.out.println(student2);
+        return "OK";
     }
 }
