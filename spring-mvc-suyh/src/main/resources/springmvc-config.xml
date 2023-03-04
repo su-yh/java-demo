@@ -4,6 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="demoController" class="com.suyh.mvc.controller.DemoController"/>
+    <bean id="suyhControllerAdvice" class="com.suyh.mvc.controller.SuyhControllerAdvice"/>
+    <bean id="suyhResponseBodyAdvice" class="com.suyh.mvc.controller.SuyhResponseBodyAdvice"/>
     <!--对于文件上传功能，需要指定一个解析器，并将其注册成一个bean 对象。-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="17367648787"/>
