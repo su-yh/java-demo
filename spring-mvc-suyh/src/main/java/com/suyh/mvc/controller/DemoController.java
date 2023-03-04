@@ -74,6 +74,7 @@ public class DemoController {
         return "OK";
     }
 
+    // 这个有问题，主要原因就是jackson 没有添加的原因吧，无法将实例对象转换成String
     @RequestMapping(value = "/custom/responseBodyAdvice", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
     @ResponseBody
     public Student customResponseBodyAdvice() {
