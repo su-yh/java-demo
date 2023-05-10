@@ -34,6 +34,7 @@
 <!--        <module>demo-08-netty-01-mulitport</module>-->
 <!--        <module>demo-cxf</module>-->
         <module>spring-mvc-suyh</module>
+        <module>demo-mybatis-source</module>
     </modules>
 
    <dependencyManagement>
