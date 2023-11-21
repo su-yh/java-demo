@@ -20,9 +20,9 @@
 
     <modules>
 <!--        <module>demo02-aba-01</module>-->
-        <module>demo-spring</module>
-        <module>demo-spring-debug</module>
-        <module>demo-spring-boot</module>
+<!--        <module>demo-spring</module>-->
+<!--        <module>demo-spring-debug</module>-->
+<!--        <module>demo-spring-boot</module>-->
         <!--        <module>demo-03-netty-01</module>-->
 <!--        <module>demo-03-netty-02</module>-->
 <!--        <module>demo-04-netty-01-LengthFieldBasedFrameDecoder</module>-->
@@ -33,8 +33,9 @@
 <!--        <module>demo-07-netty-03-rpc-client</module>-->
 <!--        <module>demo-08-netty-01-mulitport</module>-->
 <!--        <module>demo-cxf</module>-->
-        <module>spring-mvc-suyh</module>
-        <module>demo-mybatis-source</module>
+<!--        <module>spring-mvc-suyh</module>-->
+<!--        <module>demo-mybatis-source</module>-->
+        <module>demo-60-03-google-auth</module>
     </modules>
 
    <dependencyManagement>
